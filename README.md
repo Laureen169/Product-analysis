@@ -17,7 +17,7 @@ Synthetic product retail data built for practice dataset so SQL, Power BI and th
 ## schema.sql — Databricks volume + load statements for the CSVs in this folder.
 Load the CSVs with schema.sql and check the row counts above.
 - In Databricks, upload the 5 CSVs to a Volume — Catalog Explorer > your catalog + schema > Create Volume, then upload dim_product.csv, fact_sales.csv, monthly_targets.csv, inventory.csv, milestones.csv
-- In that new file, replace <catalog>, <schema>, and <volume> with yours, then run it
+- In that new file, replace <catalog, <schema, and <volume with yours, then run it
 Run Q0 at the bottom. You should still see 48 / 8,840 / 17 / 48 / 8
 
 The 5 business questions that would be ask from the datasets
