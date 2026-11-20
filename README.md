@@ -6,13 +6,13 @@ Synthetic product retail data built for practice dataset so SQL, Power BI and th
 # Files
 - Product information; dim_product.csv — 48 products, 6 categories: Jeans, Active, Tops, Dresses & Skirts, Outerwear, Shorts & Swim. Columns: product_id, product_name, category, price_usd, launch_date.
   
--Sales transaction; fact_sales.csv — 8,840 rows: daily sales, 2026-08-01 to 2026-10-31, by product × channel (Online / Store). Columns: sale_date, product_id, channel, units_sold, sales_amount, returns_units.
+- Sales transaction; fact_sales.csv — 8,840 rows: daily sales, 2026-08-01 to 2026-10-31, by product × channel (Online / Store). Columns: sale_date, product_id, channel, units_sold, sales_amount, returns_units.
 
--Sales targets; monthly_targets.csv — 17 rows: monthly sales target by category, Aug–Oct 2026.
+- Sales targets; monthly_targets.csv — 17 rows: monthly sales target by category, Aug–Oct 2026.
 
--Inventory performance; inventory.csv — 48 rows: stock_on_hand and reorder_point per product (as of Oct 31, 2026).
+- Inventory performance; inventory.csv — 48 rows: stock_on_hand and reorder_point per product (as of Oct 31, 2026).
 
--Important business milestones; milestones.csv — 8 rows: drops, launches and promotions to explain performance moves.
+- Important business milestones; milestones.csv — 8 rows: drops, launches and promotions to explain performance moves.
 
 ## schema.sql — Databricks volume + load statements for the CSVs in this folder.
 Load the CSVs with schema.sql and check the row counts above.
