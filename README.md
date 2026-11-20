@@ -4,11 +4,11 @@ End-to-end retail analytics project featuring a SQL star schema, data-quality ch
 # Product Performance Analytics — starter dataset
 Synthetic product retail data built for practice dataset so SQL, Power BI and the agent all work from the same numbers.
 # Files
-- dim_product.csv — 48 products, 6 categories: Jeans, Active, Tops, Dresses & Skirts, Outerwear, Shorts & Swim. Columns: product_id, product_name, category, price_usd, launch_date.
-- fact_sales.csv — 8,840 rows: daily sales, 2026-08-01 to 2026-10-31, by product × channel (Online / Store). Columns: sale_date, product_id, channel, units_sold, sales_amount, returns_units.
-- monthly_targets.csv — 17 rows: monthly sales target by category, Aug–Oct 2026.
-- inventory.csv — 48 rows: stock_on_hand and reorder_point per product (as of Oct 31, 2026).
-- milestones.csv — 8 rows: drops, launches and promotions to explain performance moves.
+- Product information; dim_product.csv — 48 products, 6 categories: Jeans, Active, Tops, Dresses & Skirts, Outerwear, Shorts & Swim. Columns: product_id, product_name, category, price_usd, launch_date.
+-Sales transaction; fact_sales.csv — 8,840 rows: daily sales, 2026-08-01 to 2026-10-31, by product × channel (Online / Store). Columns: sale_date, product_id, channel, units_sold, sales_amount, returns_units.
+-Sales targets; monthly_targets.csv — 17 rows: monthly sales target by category, Aug–Oct 2026.
+-Inventory performance; inventory.csv — 48 rows: stock_on_hand and reorder_point per product (as of Oct 31, 2026).
+-Important business milestones; milestones.csv — 8 rows: drops, launches and promotions to explain performance moves.
 
 schema.sql — Databricks volume + load statements for the CSVs in this folder.
 Load the CSVs with schema.sql and check the row counts above.
@@ -19,7 +19,7 @@ The 5 business questions that would be ask from the datasets
 - Is Online or Store driving the trend, and does the mix differ by category?
 - Which products are selling through fast enough to risk a stockout? (Use inventory vs. recent daily sales.)
 - Did the Sep 4 outerwear launch and the Sep 10 jean event move sales — and did the lift last?
-- Data-quality traps — find this later
+Data-quality traps — find this later
 Read this list only when you've run your own DQ checks. The planted issues are:
 - Monthly target is missing for Outerwear, 2026-09 (17 target rows, not 18).
 - 5 rows in fact_sales have negative units_sold / sales_amount.
